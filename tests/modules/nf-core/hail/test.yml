@@ -1,0 +1,7 @@
+- name: hail test_hail
+  command: nextflow run ./tests/modules/nf-core/hail -entry test_hail -c ./tests/config/nextflow.config -c ./tests/modules/nf-core/hail/nextflow.config
+  tags:
+    - hail
+  files:
+    - path: output/hail/hail.vcf.bgz
+      md5sum: 79e2e9e976a336cb0894f2d7a6c521d7
