@@ -24,10 +24,6 @@ input:
       type: file
       description: vcf/vcf.bgz file
       pattern: "*.{vcf,vcf.bgz}"
-  - csv:
-      type: file
-      description: csv/tsv file (optional)
-      pattern: "*.{csv,tsv}"
       
 output:
   - meta:
@@ -39,15 +35,23 @@ output:
       type: file
       description: File containing software versions
       pattern: "versions.yml"
-  - vcf:
+  - with_geno_vcf:
       type: file
       description: vcf/vcf.bgz file
       pattern: "*.{vcf,vcf.bgz}"
-  - index:
+  - with_geno_index :
       type: file
       description: index file
       pattern: "*.{vcf.bgz.tbi}"
-- csv:
+  - frequ_only_vcf:
+      type: file
+      description: csv/tsv file (optional)
+      pattern: "*.{bam,cram,sam}"
+  - frequ_only_index:
+      type: file
+      description: csv/tsv file (optional)
+      pattern: "*.{bam,cram,sam}"
+  - tsv:
       type: file
       description: csv/tsv file (optional)
       pattern: "*.{bam,cram,sam}"
