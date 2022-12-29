@@ -17,6 +17,8 @@ process HAIL {
     path("*_with_geno.vcf.bgz")		, emit: with_geno_vcf	, optional: true
     path("*_with_geno.vcf.bgz.tbi")	, emit: with_geno_index , optional: true    
     path("*.tsv")		            , emit: tsv             , optional: true
+    path("*.html")		            , emit: html            , optional: true
+    path("*_QC_report.txt")         , emit: QC_report_txt   , optional: true
     path "versions.yml"             , emit: versions
 
     when:
