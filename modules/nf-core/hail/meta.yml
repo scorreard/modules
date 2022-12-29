@@ -37,24 +37,24 @@ output:
       pattern: "versions.yml"
   - with_geno_vcf:
       type: file
-      description: vcf/vcf.bgz file
-      pattern: "*.{vcf,vcf.bgz}"
+      description: vcf file with individuals genotypes
+      pattern: "**_with_geno.vcf.bgz"
   - with_geno_index :
       type: file
-      description: index file
-      pattern: "*.{vcf.bgz.tbi}"
+      description: index file for the vcf with individuals genotypes
+      pattern: "*_with_geno.vcf.bgz.tbi"
   - frequ_only_vcf:
       type: file
-      description: csv/tsv file (optional)
-      pattern: "*.{bam,cram,sam}"
+      description: vcf file without individuals genotypes - only variant frequencies
+      pattern: "*_frequ_only.vcf.bgz"
   - frequ_only_index:
       type: file
-      description: csv/tsv file (optional)
-      pattern: "*.{bam,cram,sam}"
+      description: index file for the vcf file without individuals genotypes - only variant frequencies
+      pattern: "*_frequ_only.vcf.bgz.tbi"
   - tsv:
       type: file
-      description: csv/tsv file (optional)
-      pattern: "*.{bam,cram,sam}"
+      description: tsv file
+      pattern: "*.{tsv}"
   - html:
       type: file
       description: html file
