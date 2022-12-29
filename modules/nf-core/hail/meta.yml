@@ -1,17 +1,17 @@
 name: "hail"
-## TODO nf-core: Add a description of the module and list keywords
-description: write your description here
+description: Hail is Python-based data analysis tool for working with genomic data, it is fast to filter samples and varaints based on QC threasholds.
 keywords:
-  - sort
+  - variant filtering
+  - GWAS
+  - Quality control
+  - Frequency calculation
 tools:
   - "hail":
-      ## TODO nf-core: Add a description and other details for the software below
-      description: "Hail is Python-based data analysis tool for working with genomic data.
-"
-      homepage: "None"
-      documentation: "None"
+      description: "Hail is Python-based data analysis tool for working with genomic data."
+      homepage: "https://hail.is/"
+      documentation: "https://hail.is/docs/0.2/index.html"
       tool_dev_url: "https://github.com/hail-is/hail"
-      doi: ""
+      doi: "Hail Team. Hail 0.2.13-81ab564db2b4. https://github.com/hail-is/hail/releases/tag/0.2.13."
       licence: "['MIT']"
 
 ## TODO nf-core: Add a description of all of the variables used as input
