@@ -18,7 +18,7 @@ process HAIL {
     path("*_frequ_only.vcf.bgz.tbi"), emit: frequ_only_index, optional: true
     path("*.tsv")		            , emit: tsv             , optional: true
     path("*.html")		            , emit: html            , optional: true
-    path("*_QC_report.txt")         , emit: QC_report_txt   , optional: true
+    path("*.txt")                   , emit: txt             , optional: true
     path "versions.yml"             , emit: versions
 
     when:
