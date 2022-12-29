@@ -10,7 +10,7 @@ process HAIL {
     input:
     tuple val(meta), path(vcf)
     path (hail_script)
-
+    
     output:
     path("*_with_geno.vcf.bgz")		, emit: with_geno_vcf	, optional: true
     path("*_with_geno.vcf.bgz.tbi")	, emit: with_geno_index , optional: true    
@@ -29,7 +29,10 @@ process HAIL {
     def prefix = task.ext.prefix ?: "${meta.id}"
     def VERSION = '0.2.58' // WARN: Version information not provided by tool on CLI. Please update this string when bumping container versions.
     """
-    python $hail_script $vcf $args
+    python $hail_script //
+        $vcf //
+        $args
+        
 #/workspace/modules/hail_test.py
 
     cat <<-END_VERSIONS > versions.yml
