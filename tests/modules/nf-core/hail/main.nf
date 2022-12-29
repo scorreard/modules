@@ -12,5 +12,7 @@ input = [
         ]
     ]
 
-    HAIL (input)
+hail_script = "/workspace/modules/hail_test.py"
+
+    HAIL (input, hail_script)
 }
