@@ -12,10 +12,12 @@ process HAIL {
     path (hail_script)
 
     output:
-    path("*.vcf.bgz")		, emit: vcf	    , optional: true
-    path("*.vcf.bgz.tbi")	, emit: index   , optional: true
-    path("*.tsv")		    , emit: tsv     , optional: true
-    path "versions.yml"     , emit: versions
+    path("*_frequ_only.vcf.bgz")	, emit: frequ_only_vcf	, optional: true
+    path("*_frequ_only.vcf.bgz.tbi"), emit: frequ_only_index, optional: true
+    path("*_with_geno.vcf.bgz")		, emit: with_geno_vcf	, optional: true
+    path("*_with_geno.vcf.bgz.tbi")	, emit: with_geno_index , optional: true    
+    path("*.tsv")		            , emit: tsv             , optional: true
+    path "versions.yml"             , emit: versions
 
     when:
     task.ext.when == null || task.ext.when
