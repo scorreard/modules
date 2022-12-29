@@ -39,11 +39,26 @@ output:
       type: file
       description: File containing software versions
       pattern: "versions.yml"
-  ## TODO nf-core: Delete / customise this example output
-  - bam:
+  - vcf:
       type: file
-      description: Sorted BAM/CRAM/SAM file
+      description: vcf/vcf.bgz file
+      pattern: "*.{vcf,vcf.bgz}"
+  - index:
+      type: file
+      description: index file
+      pattern: "*.{vcf.bgz.tbi}"
+- csv:
+      type: file
+      description: csv/tsv file (optional)
       pattern: "*.{bam,cram,sam}"
+  - html:
+      type: file
+      description: html file
+      pattern: "*.{html}"
+  - txt:
+      type: file
+      description: txt file
+      pattern: "*.{txt}"
 
 authors:
   - "@scorreard"
