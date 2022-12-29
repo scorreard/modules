@@ -12,10 +12,10 @@ process HAIL {
     path (hail_script)
 
     output:
-    path("*_frequ_only.vcf.bgz")	, emit: frequ_only_vcf	, optional: true
-    path("*_frequ_only.vcf.bgz.tbi"), emit: frequ_only_index, optional: true
     path("*_with_geno.vcf.bgz")		, emit: with_geno_vcf	, optional: true
     path("*_with_geno.vcf.bgz.tbi")	, emit: with_geno_index , optional: true    
+    path("*_frequ_only.vcf.bgz")	, emit: frequ_only_vcf	, optional: true
+    path("*_frequ_only.vcf.bgz.tbi"), emit: frequ_only_index, optional: true
     path("*.tsv")		            , emit: tsv             , optional: true
     path("*.html")		            , emit: html            , optional: true
     path("*_QC_report.txt")         , emit: QC_report_txt   , optional: true
